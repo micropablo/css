@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Study Room Reservation</title>
+</head>
+<body>
+
+<h2>Study Room Reservation Form</h2>
+
+<form action="formValidation.php" method="POST">
+
+    <label>Name and surname:</label><br>
+    <input type="text" name="name" required><br><br>
+
+    <label>Email:</label><br>
+    <input type="text" name="email" required><br><br>
+
+    <label>Phone number:</label><br>
+    <input type="text" name="phone" required><br><br>
+
+    <label>Reservation date:</label><br>
+    <input type="date" name="date" required><br><br>
+
+    <label>Time slot:</label><br>
+    <select name="time" required>
+        <option value="">Select</option>
+        <option value="10:00-12:00">10:00-12:00</option>
+        <option value="12:00-14:00">12:00-14:00</option>
+        <option value="16:00-18:00">16:00-18:00</option>
+    </select><br><br>
+
+    <label>Room type:</label><br>
+    <input type="radio" name="room" value="silence" required> Silence (max 3)<br>
+    <input type="radio" name="room" value="group"> Group (max 6)<br><br>
+
+    <label>Number of assistants:</label><br>
+    <input type="number" name="assistants" min="1" max="6" required><br><br>
+
+    <label>Optional resources:</label><br>
+    <input type="checkbox" name="resources[]" value="Blackboard"> Blackboard (+1€)<br>
+    <input type="checkbox" name="resources[]" value="Screen"> Screen (+2€)<br>
+    <input type="checkbox" name="resources[]" value="HDMI"> HDMI adapter (+1€)<br><br>
+
+    <label>User code:</label><br>
+    <input type="text" name="usercode" required><br><br>
+
+    <label>Promotional code:</label><br>
+    <input type="text" name="promo"><br><br>
+
+    <input type="checkbox" name="policy" required> I accept the data protection policy<br><br>
+
+    <input type="submit" value="Submit">
+
+</form>
+
+</body>
+</html>
